@@ -1,0 +1,11 @@
+{
+  "Effect": "Deny",
+  "Principal": "*",
+  "Action": "s3:GetObject",
+  "Resource": "arn:aws:s3:::examplebucket/*",
+  "Condition": {
+    "StringNotEquals": {
+      "aws:PrincipalOrgID": "o-12345"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "Effect": "Deny",
+  "Action": "route53:*",
+  "Resource": "*",
+  "Condition": {
+    "StringNotEquals": {
+      "aws:PrincipalTag/DNSOperator": "true"
+    }
+  }
+}

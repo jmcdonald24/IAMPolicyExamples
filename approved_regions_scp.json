@@ -1,0 +1,17 @@
+{
+  "Effect": "Deny",
+  "NotAction": [
+    "iam:*",
+    "organizations:*",
+    "route53:*"
+  ],
+  "Resource": "*",
+  "Condition": {
+    "StringNotEquals": {
+      "aws:RequestedRegion": [
+        "eu-central-1",
+        "eu-west-1"
+      ]
+    }
+  }
+}
